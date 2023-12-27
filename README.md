@@ -1,31 +1,49 @@
-# RAG Pipeline for SEC Filings QA
+# SEC Filing RAG Pipeline
 
-This project implements a RAG (Retriever-Generator) Pipeline for Document Question Answering over SEC filings. It utilizes LangChain as the LLM framework, Pinecone as the vector store, and OpenAI's embedding model.
+The SEC Filing RAG (Retrieve, Answer, Generate) Pipeline is a versatile tool designed for processing and extracting information from SEC filings. It leverages various libraries and modules to enable efficient document retrieval, question-answering, and text analysis.
 
-## Installation
+## Table of Contents
+- [Initial Setup](#initial-setup)
+- [Importing Text Processing Modules](#importing-text-processing-modules)
+- [Loading and Processing Financial Reports](#loading-and-processing-financial-reports)
+- [Setting Up the Vector Store](#setting-up-the-vector-store)
+- [Adding SEC Filings to the Vector Store](#adding-sec-filings-to-the-vector-store)
+- [Create Document Q&A Chain With LLM Framework](#create-document-qa-chain-with-llm-framework)
+- [Document Q&A Queries By Company](#document-qa-queries-by-company)
 
-To set up the project, install the required dependencies:
+---
 
-```bash
-pip install openai
-pip install pinecone-client
-pip install langchain
-pip install tiktoken
-pip install pypdf
+## Initial Setup
 
+### Step 1: Install Dependencies
+Install essential libraries such as openai, pinecone-client, langchain, tiktoken, and pypdf to enable language model integration, vector storage, and PDF processing capabilities.
 
-## Loading SEC Filings
-The pipeline processes SEC filings by first loading and splitting the text data. This is demonstrated with financial reports from AXSM and JNJ.
+## Importing Text Processing Modules
 
-## Setting Up Vector Store
-Using Pinecone and OpenAI embeddings, the project sets up a vector store for efficient retrieval of document sections relevant to user queries.
+### Step 2: Importing Text Processing Modules
+Import langchain modules, including RecursiveCharacterTextSplitter and PyPDFLoader, for text chunking and PDF document loading.
 
-## Adding SEC Filings to Vector Store
-SEC filings are added to the vector store, allowing for efficient querying.
+## Loading and Processing Financial Reports
 
-## Creating Q&A Chain
-The core of the project is the Q&A chain, which leverages LangChain for querying and generating responses.
+### Step 3: Loading and Processing Financial Reports
+Load and process financial reports from Axsome Therapeutics Inc. (AXSM) and Johnson & Johnson (JNJ).
 
-## Usage
-To use the pipeline, invoke the chain with specific questions and company tickers.
+## Setting Up the Vector Store
 
+### Step 4: Setting Up the Vector Store
+Establish a vector store using Pinecone and OpenAI embeddings for efficient document vectorization.
+
+## Adding SEC Filings to the Vector Store
+
+### Step 5: Adding SEC Filings to the Vector Store
+Add SEC filings from AXSM and JNJ to the vector store under respective namespaces for structured and searchable data.
+
+## Create Document Q&A Chain With LLM Framework
+
+### Step 6: Create Document Q&A Chain With LLM Framework
+Set up a question-answering chain using LangChain's capabilities, integrating chat models, embeddings, and prompt templates.
+
+## Document Q&A Queries By Company
+
+### Step 7: Document Q&A Queries By Company
+Perform specific queries on financial reports of companies like AXSM and JNJ using the Q&A chain.
